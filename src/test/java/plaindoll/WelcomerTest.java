@@ -1,9 +1,9 @@
 package plaindoll;
 
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.junit.Assert.*;
-
 import org.junit.Test;
+
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.junit.Assert.assertThat;
 
 public class WelcomerTest {
 	
@@ -29,5 +29,9 @@ public class WelcomerTest {
 	@Test
 	public void welcomerSaysSomething(){
 		assertThat(welcomer.saySome(), containsString("something"));
+	}
+	@Test
+	public void welcomerCallsHunter() {
+		assertThat(welcomer.callHunter(), containsString("hunter"));
 	}
 }
